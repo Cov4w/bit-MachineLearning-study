@@ -15,7 +15,7 @@ import numpy as np
 np.load()
 ```
 
-![image.png](./temp/image.png)
+![image.png](../temp/image6-1-0.png)
 
 0에 가까울수록 검게 나타나고 255에 가까울수록 밝습니다.
 
@@ -34,19 +34,19 @@ np.load()
 2. 각 샘플의 평균값을 구하기 위해 axis=1로 지정한 다음 각 샘플의 픽셀 평균 값 계산
 3. 사과, 파인애플, 바나나 샘플 100개에 대한 픽셀 평균값 계산 후 히스토그램 생성
 
-![image.png](./temp/image%201.png)
+![image.png](../temp/image6-1-01.png)
 
 사과와 파인애플은 많이 겹쳐있어 픽셀값만으로는 구분하기 쉽지 않습니다.
 
 - 샘플의 평균값이 아닌 픽셀의 평균값을 비교
 
-![image6-1-1.png](./temp/image6-1-1.png)
+![image6-1-1.png](../temp/image6-1-1.png)
 
 순서대로 사과, 파인애플, 바나나 그래프
 
 - 픽셀 평균값을 100x100 크기로 바꿔서 이미지처럼 출력하여 비교
 
-![image6-1-2.png](./temp/image6-1-2.png)
+![image6-1-2.png](../temp/image6-1-2.png)
 
 세 과일은 픽셀 위치에 따라 값의 크기가 차이납니다.
 
@@ -56,7 +56,7 @@ np.load()
     1. 모든 샘플에서 apple_mean을 뺀 절대값의 평균 계산하기
     2. 해당 값이 가장 작은 순서대로 100개 고르기 (apple_mean과 오차가 가장 작은 샘플 100개)
     
-    ![image6-1-3.png](./temp/image6-1-3.png)
+    ![image6-1-3.png](../temp/image6-1-3.png)
     
 - 군집
     - 비슷한 샘플끼리 그룹으로 모으는 작업
@@ -140,11 +140,11 @@ draw_fruits(fruits[km.labels_==1])
 draw_fruits(fruits[km.labels_==2])
 ```
 
-![image6-2-1.png](./temp/image6-2-1.png)
+![image6-2-1.png](../temp/image6-2-1.png)
 
-![image6-2-2.png](./temp/image6-2-2.png)
+![image6-2-2.png](../temp/image6-2-2.png)
 
-![image6-2-2-1.png](./temp/image6-2-2-1.png)
+![image6-2-2-1.png](../temp/image6-2-2-1.png)
 
 #### 클러스터 중심
 
@@ -155,7 +155,7 @@ draw_fruits(fruits[km.labels_==2])
 draw_fruits(km.cluster_centers_.reshape(-1, 100, 100), ratio=3)
 ```
 
-![image6-2-3.png](./temp/image6-2-3.png)
+![image6-2-3.png](../temp/image6-2-3.png)
 
 #### 최적의 K 찾기
 
@@ -176,7 +176,7 @@ plt.ylabel('inertia')
 plt.show()
 ```
 
-![image6-2-5.png](./temp/image6-2-5.png)
+![image6-2-5.png](../temp/image6-2-5.png)
 
  k-평균 알고리즘은 사전에 클러스터 개수를 미리 지정해야합니다. 
 
@@ -326,11 +326,11 @@ for label in range(0, 3):
     print("\n")
 ```
 
-![image6-3-4.png](./temp/image6-3-4.png)
+![image6-3-4.png](../temp/image6-3-4.png)
 
-![image6-3-5.png](./temp/image6-3-5.png)
+![image6-3-5.png](../temp/image6-3-5.png)
 
-![image6-3-6.png](./temp/image6-3-6.png)
+![image6-3-6.png](../temp/image6-3-6.png)
 
 - 훈련 데이터 차원을 줄이면 시각화라는 장점을 얻을 수 있습니다.
 
@@ -342,4 +342,4 @@ plt.legend(['apple','banana','pineapple'])
 plt.show()
 ```
 
-![image6-3-3.png](./temp/image6-3-3.png)
+![image6-3-3.png](../temp/image6-3-3.png)
