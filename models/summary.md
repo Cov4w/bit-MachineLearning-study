@@ -49,11 +49,11 @@ gini (지니 불순도)
     - `min_samples_split`: 노드를 분할하기 위한 최소 샘플 수 (기본값 2, 2 이상의 정수여야 함)
     - `min_impurity_decrease`: 노드를 분할하기 위한 불순도 최소 감소량 지정
 
-![image.png](./temp/image.png)
+![image.png](../temp/image.png)
 
 결정 트리는 특성 값의 크기 자체가 아니라 대소 비교로 노드를 나누기 때문에 **표준화 전처리 과정이 필요 없다.**
 
-![image1.png](./temp/image%201.png)
+![image1.png](../temp/image%201.png)
 
 ## 교차 검증과 그리드 서치
 
@@ -63,7 +63,7 @@ gini (지니 불순도)
 
 테스트 세트로 일반화 성능을 측정하기 전에, 전체 데이터 중 20%를 테스트 세트로 만들고 나머지 80%의 훈련 세트에서 20%를 다시 떼어내 검증 세트로 만든다.
 
-![image2.png](./temp/image%202.png)
+![image2.png](../temp/image%202.png)
 
 ### 교차 검증
 
