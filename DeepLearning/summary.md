@@ -77,7 +77,7 @@ model = keras.Sequential([inputs, dense1, dense2])
 - model.summary()
     - 층에 대한 정보 보기
 
-![image.png](./image7-2-1.png)
+![image.png](./images/image7-2-1.png)
 
 1. 첫 줄 : 모델의 이름
 2. 그다음 입력층을 제외하고 이 모델에 들어 있는 층이 순서대로 나옵니다.
@@ -134,7 +134,7 @@ model.summary()
 
 - Flatten 클래스에 포함된 모델 파라미터는 0개입니다.
 
-![image.png](./image7-2-2.png)
+![image.png](./images/image7-2-2.png)
 
 - 시그모이드 함수를 사용했을 때와 비교하면 성능이 소폭 향상되었습니다.
 
@@ -220,13 +220,13 @@ model = model_fn()
 model.summary()
 ```
 
-![image.png](./image7-3-0.png)
+![image.png](./images/image7-3-0.png)
 
 history 속성에 포함된 손실과 정확도
 
 - 에포크마다 계산한 값이 순서대로 나열된 단순한 리스트
 
-![image7-3-1.png](./image7-3-1.png)
+![image7-3-1.png](./images/image7-3-1.png)
 
 정확도
 
@@ -234,7 +234,7 @@ history 속성에 포함된 손실과 정확도
 
 에포크 횟수를 20으로 늘리고 모델을 훈련한 손실 그래프
 
-![image7-3-3.png](./image7-3-3.png)
+![image7-3-3.png](./images/image7-3-3.png)
 
 #### 검증 손실
 
@@ -244,7 +244,7 @@ history 속성에 포함된 손실과 정확도
 - validation_data 매개변수에 검증에 사용할 입력과 타깃값을 튜플로 만들어 전달
 - 과대/과소적합 문제를 조사하기 위해 훈련 손실과 검증 손실을 한 그래프에 그려서 비교
 
-![image7-3-4.png](./image7-3-4.png)
+![image7-3-4.png](./images/image7-3-4.png)
 
 검증 손실이 감소하다가 다시 증가 / 훈련 손실은 꾸준히 감소 ⇒ 전형적인 과대적합 모델
 
@@ -252,7 +252,7 @@ Adam
 
 - 적응적 학습률을 사용해 에포크가 진행되면서 학습률의 크기를 조정할 수 있다.
 
-![image7-3-5.png](./image7-3-5.png)
+![image7-3-5.png](./images/image7-3-5.png)
 
 #### 드롭아웃
 
@@ -260,13 +260,13 @@ Adam
     - 이전 층의 일부 뉴런이 랜덤하게 꺼지면 특정 뉴런에 과대하게 의존하는 것을 줄일 수 있고 모든 입력에 대해 주의를 기울여야 하기 때문에 과대적합을 막을 수 있다.
 - 훈련 중에 적용되며 평가나 예측에서는 적용하지 않는다.
 
-![image7-3-6-1.png](./image7-3-6-1.png)
+![image7-3-6-1.png](./images/image7-3-6-1.png)
 
 - 은닉층 뒤에 추가된 드롭아웃 층은 훈련되는 모델 파라미터가 없다.
 - 일부 뉴런의 출력을 0으로 만들지만 전체 출력 배열의 크기를 바꾸지는 않는다.
 - 케라스는 모델을 평가와 예측에 사용할 때는 자동으로 드롭아웃을 적용하지 않는다.
     
-    ![image7-3-6.png](./image7-3-6.png)
+    ![image7-3-6.png](./images/image7-3-6.png)
     
 - 과대적합이 확실히 줄어든 모습 (epoch 11)
 
@@ -300,6 +300,6 @@ Adam
     - 조기 종료 (EarlyStopping 콜백)
         - 검증 손실이 더 이상 감소하지 않고 상승하여 과대적합이 일어나면 훈련을 계속 진행하지 않고 멈추는 기법 (patience 매개변수로 검증 손실이 향상되지 않더라도 참을 에포크 횟수를 지정하고, restore_best_weights=True로 가장 낮은 검증 손실을 낸 모델 파라미터로 되돌린다.)
             
-            ![image7-3-7.png](./image7-3-7.png)
+            ![image7-3-7.png](./images/image7-3-7.png)
             
 - 에포크 인덱스 15 (16번째 에포크)에서 조기종료 (최상의 모델은 14번째 에포크인 인덱스 13)
