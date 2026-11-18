@@ -83,7 +83,8 @@ model_gru.summary()
 model_gru.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 checkpoint_cb = keras.callbacks.ModelCheckpoint('best-gru-model.keras', save_best_only=True)
 early_stopping_cb = keras.callbacks.EarlyStopping(patience=3, restore_best_weights=True)
-history = model_gru.fit(train_seq, train_target, epochs=100, batch_size= 64, validation_data=(val_seq, val_target), callbacks = [checkpoint_cb, early_stopping_cb])
+history = model_gru.fit(train_seq, train_target, epochs=100, batch_size= 64, 
+                        validation_data=(val_seq, val_target), callbacks = [checkpoint_cb, early_stopping_cb])
 
 plt.plot(history.history['loss'], label = 'train')
 plt.plot(history.history['val_loss'], label = 'val')
